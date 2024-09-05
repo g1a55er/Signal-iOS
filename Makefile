@@ -2,6 +2,9 @@ SCHEME=Signal
 
 .PHONY: dependencies
 dependencies: pod-setup fetch-ringrtc
+	# This is just the commit of origin/main when I made this change. 
+	# If necessary in the future, one can tie this to some dependency version indicator and check it is up to date in XCode.
+	echo "72431ae93040fdf28ec231fb9b70e6e903d2dfee" > $(CURDIR)/.dependencies_last_updated
 
 .PHONY: pod-setup
 pod-setup:

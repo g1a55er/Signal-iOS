@@ -12270,6 +12270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D221A0BC169C9E5F00537ABF /* Build configuration list for PBXNativeTarget "Signal" */;
 			buildPhases = (
+				49E1B75B2C89B4FC00DBA644 /* [Signal] Run Script: Verify Dependencies Installed */,
 				641003894BBE033C4B3E736C /* [CP] Check Pods Manifest.lock */,
 				D221A085169C9E5E00537ABF /* Sources */,
 				D221A086169C9E5E00537ABF /* Frameworks */,
@@ -12741,6 +12742,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PROJECT_DIR}\"/Scripts/update_plist_info.sh\n";
+		};
+		49E1B75B2C89B4FC00DBA644 /* [Signal] Run Script: Verify Dependencies Installed */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Signal] Run Script: Verify Dependencies Installed";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This file is created by \"make dependencies\"\nif [ ! -f \".dependencies_last_updated\" ]; then\n  echo \"error: Dependencie from submodules (e.g. RingRTC) missing. Have you run \\\"make dependencies\\\" yet? (See BUILDING.md for more info)\" >&2\n  exit 1\nfi\n\n";
 		};
 		5B77DDC6DC8E67BE40AECB55 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
